@@ -24,10 +24,13 @@ public class ProductPage extends BaseClass {
 	@FindBy(className = "_3SkBxJ")
 	public WebElement cartBtn;
 
+	
+	//returns the price of the product
 	public String getProductPrice() {
 		return priceElement.getText();
 	}
 
+	//clicks on add to card button and returns  CartPage
 	public CartPage clickAddToCartAndOpenCart() {
 		elementClick(addCartBtn);
 		waitLoad(5);

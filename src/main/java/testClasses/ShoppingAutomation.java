@@ -45,7 +45,7 @@ public class ShoppingAutomation extends BaseClass {
 				driver.switchTo().window(s);
 			}
 		}
-		
+
 		String costOfFirst = productPage.getProductPrice();
 		cartPage = productPage.clickAddToCartAndOpenCart();
 		reportOnConsole("Price of first product - " + costOfFirst);
@@ -67,18 +67,18 @@ public class ShoppingAutomation extends BaseClass {
 				driver.switchTo().window(s);
 			}
 		}
-		
+
 		String costOfSecond = productPage.getProductPrice();
 		reportOnConsole("Price of second product - " + costOfSecond);
 		cartPage = productPage.clickAddToCartAndOpenCart();
 		String newOrderAmount = cartPage.getOrderValue();
 		reportOnConsole("New Order Amount is -" + newOrderAmount);
 		takeScreenshot();
-		
+
 		int c1 = LocalTextFormatter.formatPrice(costOfFirst);
 		int c2 = LocalTextFormatter.formatPrice(costOfSecond);
 		int orderTotal = LocalTextFormatter.formatPrice(newOrderAmount);
-		
+
 		try {
 			Assert.assertEquals(c1 + c2, orderTotal, "Amount matched");
 			reportOnConsole(c1 + c2 + " matches with " + orderTotal);

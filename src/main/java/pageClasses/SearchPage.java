@@ -32,11 +32,13 @@ public class SearchPage extends BaseClass {
 		return PageFactory.initElements(driver, SearchPage.class);
 	}
 
+	// clears the searchbox value
 	public void clearSearchBox() {
 		clearInput(searchBox);
 
 	}
 
+	// clicks on first non sponsored link
 	public ProductPage clickOnFirstNonSponsoredLink() {
 		for (int i = 0; i < cards.size(); i++) {
 			List<WebElement> eList = cards.get(i).findElements(By.className("_2tfzpE"));

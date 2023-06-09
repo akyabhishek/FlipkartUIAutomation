@@ -26,12 +26,15 @@ public class Homepage extends BaseClass {
 	@FindBy(className = "L0Z3Pu")
 	public WebElement searchBtn;
 
+	
+	//search product and returns the searchpage
 	public SearchPage searchProduct(String searchStr) {
 		enterText(searchBox, searchStr);
 		elementClick(searchBtn);
 		return PageFactory.initElements(driver, SearchPage.class);
 	}
 
+	//clicks on cancel if register modal is visible
 	public void clickCancelModal() {
 		try {
 			regModal.isDisplayed();
