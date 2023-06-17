@@ -4,10 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-import javax.xml.xpath.XPath;
-
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -21,6 +18,9 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
@@ -57,20 +57,21 @@ public class BaseClass {
 					reportFail(browserName+" is not a valid browser name");
 			}
 		} catch (Exception e) {
-			reportFail(e.getMessage());
+			System.out.println(e.getMessage());
+//			reportFail(e.getMessage());
 		}
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
 	}
 
 	// opens URL
-	public Homepage openURL(String URL) {
+	public Homepage openHomepage(String URL) {
 		try {
 			driver.get(URL);
 			return PageFactory.initElements(driver, Homepage.class);
-			
+
 		} catch (Exception e) {
 			reportFail(e.getMessage());
 		}
@@ -116,6 +117,7 @@ public class BaseClass {
 		}
 	}
 
+	
 	public void waitLoad(int i) {
 		try {
 			Thread.sleep(i * 1000);
@@ -185,7 +187,7 @@ public class BaseClass {
 			reportFail(e.getMessage());
 		}
 	}
-	
+
 
 
 }

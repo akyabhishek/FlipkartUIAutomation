@@ -15,7 +15,7 @@ public class CartPage extends BaseClass {
 	@FindBy(xpath = "//div[@class='_1dqRvU']//span")
 	public WebElement orderValuElement;
 
-	//returns string value of order in rupees
+	// returns string value of order in rupees
 	public String getOrderValue() {
 		return orderValuElement.getText();
 	}

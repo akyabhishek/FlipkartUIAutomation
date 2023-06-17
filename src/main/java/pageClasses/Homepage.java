@@ -1,6 +1,5 @@
 package pageClasses;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,7 +25,7 @@ public class Homepage extends BaseClass {
 	@FindBy(className = "L0Z3Pu")
 	public WebElement searchBtn;
 
-	
+
 	//search product and returns the searchpage
 	public SearchPage searchProduct(String searchStr) {
 		enterText(searchBox, searchStr);

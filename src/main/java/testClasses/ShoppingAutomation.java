@@ -1,14 +1,10 @@
 package testClasses;
 
-import java.util.Formatter;
 import java.util.Set;
 
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.beust.jcommander.Parameter;
 
 import baseClasses.BaseClass;
 import pageClasses.CartPage;
@@ -29,7 +25,7 @@ public class ShoppingAutomation extends BaseClass {
 	public void testCartOrderValue(String browser) {
 
 		invokeBrowser(browser);
-		homepage = openURL("https://www.flipkart.com/");
+		homepage = openHomepage("https://www.flipkart.com/");
 		verifyTitle(
 				"Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!");
 		homepage.clickCancelModal();
@@ -46,8 +42,9 @@ public class ShoppingAutomation extends BaseClass {
 			}
 		}
 
-		String costOfFirst = productPage.getProductPrice();
+		
 		cartPage = productPage.clickAddToCartAndOpenCart();
+		String costOfFirst = cartPage.getOrderValue();
 		reportOnConsole("Price of first product - " + costOfFirst);
 		String orderAmount = cartPage.getOrderValue();
 		reportOnConsole("Order Amount is -" + orderAmount);

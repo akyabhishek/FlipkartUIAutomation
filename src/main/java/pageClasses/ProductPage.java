@@ -1,9 +1,7 @@
 package pageClasses;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,13 +22,12 @@ public class ProductPage extends BaseClass {
 	@FindBy(className = "_3SkBxJ")
 	public WebElement cartBtn;
 
-	
-	//returns the price of the product
+	// returns the price of the product
 	public String getProductPrice() {
 		return priceElement.getText();
 	}
 
-	//clicks on add to card button and returns  CartPage
+	// clicks on add to card button and returns CartPage
 	public CartPage clickAddToCartAndOpenCart() {
 		elementClick(addCartBtn);
 		waitLoad(5);

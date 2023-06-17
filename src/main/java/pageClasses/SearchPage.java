@@ -40,10 +40,10 @@ public class SearchPage extends BaseClass {
 
 	// clicks on first non sponsored link
 	public ProductPage clickOnFirstNonSponsoredLink() {
-		for (int i = 0; i < cards.size(); i++) {
-			List<WebElement> eList = cards.get(i).findElements(By.className("_2tfzpE"));
+		for (WebElement card : cards) {
+			List<WebElement> eList = card.findElements(By.className("_2tfzpE"));
 			if (eList.size() == 0) {
-				cards.get(i).findElement(By.className("_1fQZEK")).click();
+				card.findElement(By.className("_1fQZEK")).click();
 				return PageFactory.initElements(driver, ProductPage.class);
 			}
 		}
