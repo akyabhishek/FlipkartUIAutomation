@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-17T18:56:50 IST" name="Suite" finished-at="2023-06-17T18:58:36 IST" duration-ms="106868">
+  <suite started-at="2023-06-17T19:20:21 IST" name="Suite" finished-at="2023-06-17T19:22:13 IST" duration-ms="112147">
     <groups>
     </groups>
-    <test started-at="2023-06-17T18:56:50 IST" name="ChromeTest" finished-at="2023-06-17T18:58:36 IST" duration-ms="106868">
+    <test started-at="2023-06-17T19:20:21 IST" name="ChromeTest" finished-at="2023-06-17T19:22:13 IST" duration-ms="112147">
       <class name="testClasses.ShoppingAutomation">
-        <test-method signature="testCartOrderValue(java.lang.String)[pri:0, instance:testClasses.ShoppingAutomation@1d9b7cce]" started-at="2023-06-17T18:56:50 IST" name="testCartOrderValue" finished-at="2023-06-17T18:58:36 IST" duration-ms="106425" status="PASS">
+        <test-method signature="testCartOrderValue(java.lang.String)[pri:0, instance:testClasses.ShoppingAutomation@1d9b7cce]" started-at="2023-06-17T19:20:21 IST" name="testCartOrderValue" finished-at="2023-06-17T19:22:13 IST" duration-ms="111795" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCartOrderValue -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:testClasses.ShoppingAutomation@1d9b7cce]" started-at="2023-06-17T18:58:36 IST" name="quitBrowser" finished-at="2023-06-17T18:58:36 IST" duration-ms="396" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:testClasses.ShoppingAutomation@1d9b7cce]" started-at="2023-06-17T19:22:13 IST" name="quitBrowser" finished-at="2023-06-17T19:22:13 IST" duration-ms="301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
